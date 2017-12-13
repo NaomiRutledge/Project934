@@ -25,7 +25,7 @@
                                         MilkRatio=1;
     end
     HourlyMilkProduction=MilkRatio*DailyMilk;
-    HourlyMilk=reshape(HourlyMilkProduction,1,2190);
+    HourlyMilk=reshape(HourlyMilkProduction,1,(365*24/h));
     TotalYearlyMilk=sum(DailyMilk);
     %Final Equation
     a=0.1;

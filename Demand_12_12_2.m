@@ -1,6 +1,6 @@
 %Data Sets
     %HourPeriod
-    h=4;
+    h=6;
     t1=datetime(2010,1,1,0,0,0);
     t2=datetime(2010,12,31,23,0,0);
     jan=datetime(2010,1,1,0,0,0);
@@ -37,4 +37,6 @@ Q_totalyearwh;
 run Milking_Machine_12_12_1
 Q_totalyearmm;
 
+Q_all=[Q_totalyearmc Q_totalyearwh Q_totalyearmm];
+Q_total=sum(Q_all)
 %run Lighting_13_12_1
