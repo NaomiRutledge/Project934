@@ -3,6 +3,7 @@ T_hot=80;
 T_cold=T_amb2;
 T_w=T_hot-T_cold;
 %Mass of Water as a function of cows  & MilkingTime, given 0.5l for each
+%https://dairy.ahdb.org.uk/technical-information/animal-health-welfare/mastitis/working-arena-prevention-of-infection/milking-parlour/cleaning-routine/#.WjFfIFVl-M8
 %car per time unit.
 M_w=cows*0.5*1*MilkTime1;
 e_wh=0.9;

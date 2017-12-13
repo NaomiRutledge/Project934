@@ -37,4 +37,4 @@
     %Capacity of the MilkCoolers
     %http://www.fao.org/3/a-i5791e.pdf - chosen the least efficient one
     C_mc=2;
-    MilkTime1=Q_mc/C_mc;
+    MilkTime1=Q_mc./C_mc;
