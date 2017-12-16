@@ -37,6 +37,7 @@ Q_totalyearwh;
 run Milking_Machine_12_12_1
 Q_totalyearmm;
 
+%run Lighting_13_12_1
+
 Q_all=[Q_totalyearmc Q_totalyearwh Q_totalyearmm];
 Q_total=sum(Q_all);
-%run Lighting_13_12_1
