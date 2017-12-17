@@ -37,7 +37,7 @@
     %Cap could be up to 13kW
     C_mc=7;
     Q_mc=(C_mc*dT.*HourlyMilk)./(COP*3600);
-    Q_totalyearmc=sum(Q_mc);
+    Q_totalyearmc=sum(Q_mc)
     %Capacity of the MilkCoolers
     %http://www.fao.org/3/a-i5791e.pdf - chosen the least efficient one
     

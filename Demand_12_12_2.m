@@ -31,14 +31,14 @@ run Milk_12_12_2
 Q_totalyearmc;
 
 run Water_Heating_12_12_2
-Q_totalyear_wh;
+Q_totalyearwh;
 
 run Milking_Machine_12_12_1
 Q_totalyearmm;
 
 %run Lighting_13_12_1
 
-Q_all_matrix=[Q_totalyearmc Q_totalyear_wh Q_totalyearmm];
+Q_all_matrix=[Q_totalyearmc Q_totalyearwh Q_totalyearmm];
 Q_total=sum(Q_all_matrix);
 Q_all=Q_mc+Q_wh+Q_mm;
 %plot(ts1,Q_all)

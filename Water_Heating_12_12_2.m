@@ -51,5 +51,5 @@ for T_cold2=T_hot-20
     Q_wh2=(C_wh.*T_w2*M_w)/(e_wh*3600).*MilkTime1;
     Q_totalyearwh2=sum(Q_wh2);
 end 
-Q_wh=Q_wh1+Q_wh2
-Q_totalyear_wh=Q_totalyearwh1+Q_totalyearwh2;
+Q_wh=Q_wh1+Q_wh2;
+Q_totalyearwh=Q_totalyearwh1+Q_totalyearwh2;
