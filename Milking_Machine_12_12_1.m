@@ -2,7 +2,7 @@ cows;
 %http://www.agriland.ie/farming-news/how-many-cows-can-one-person-milk-its-not-as-straightforward-as-you-may-think/
 cluster=20;
 Ratio1=cows/cluster;
-t_row=MilkRatio*12/60; %Assumes that Milk requires cooled ASAP after milking.
+t_row=TimeRatio*12/60; %Assumes that Milk requires cooled ASAP after milking.
 t_row=repelem(t_row,1,365);
 t_row=reshape(t_row,1,(365*(24/h)));
 
