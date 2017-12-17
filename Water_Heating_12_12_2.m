@@ -41,15 +41,15 @@ for T_cold1=T_amb2
                                         TimeRatio_wh=0.02777;
         end
     t_wh1=repmat(TimeRatio_wh,365,1);
-    t_wh1=reshape(t_wh1,1,2190);
+    t_wh1=reshape(t_wh1,1,(365*24/h));
     Q_wh1=[(C_wh.*T_w1.*M_w)/(e_wh*3600)].*t_wh1;
     Q_totalyearwh1=sum(Q_wh1);
 end 
-for T_cold2=T_hot-20
+for T_cold2=T_hot-20;
     %Since minimum temp is 60. Taken from same area as T_hot temp. 
     T_w2=T_hot-T_cold2;
     Q_wh2=(C_wh.*T_w2*M_w)/(e_wh*3600).*MilkTime1;
     Q_totalyearwh2=sum(Q_wh2);
 end 
 Q_wh=Q_wh1+Q_wh2;
-Q_totalyearwh=Q_totalyearwh1+Q_totalyearwh2;
+Q_totalyearwh=Q_totalyearwh1+Q_totalyearwh2
