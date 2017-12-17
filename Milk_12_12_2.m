@@ -4,7 +4,9 @@
     days=365;
     cows=45;
     x=[1:1:days];
-    DailyMilk=(cows*7800*ro_milk)/(days*0.688818719)*(-2*(10^-10).*x.^4+2*(10^-07).*x.^3-8*(10^-05).*x.^2+0.0116.*x+0.4352);
+    %4662.39L OF MILK PER YEAR CALC'D FROM AVERAGE VALUES ON MODELING
+    %ENERGY CONSUMPTION PAPER
+    DailyMilk=(cows*4662.39*ro_milk)/(days*0.688818719)*(-2*(10^-10).*x.^4+2*(10^-07).*x.^3-8*(10^-05).*x.^2+0.0116.*x+0.4352);
     %Ratio of milk produced every hour to max milk production. Should be +-
     %a certain amount. Based on https://strath-my.sharepoint.com/:x:/r/personal/npb13178_uni_strath_ac_uk/_layouts/15/WopiFrame.aspx?sourcedoc=%7BAFD5B4F7-09BD-44AE-8019-6E9053BE82F9%7D&file=Milk%20Produced%20Per%20Cow,%20States%20and%20United%20States%20(1).csv&action=default
     if h==1
@@ -14,7 +16,7 @@
     elseif h==3
                 MilkRatio=[0;0.1;0.5;0.35;0.05;0;0;0]; 
     elseif h==4
-                        MilkRatio=[0;0.5;0.45;0.05;0;0];
+                        MilkRatio=[0;0.25;0.5;0.25;0;0];
     elseif h==6
                             MilkRatio=[0.1;0.85;0.05;0];
     elseif h==8
@@ -29,12 +31,13 @@
     TotalYearlyMilk=sum(DailyMilk);
     %Final Equation
     a=0.1;
-    T_amb_evap=(T_amb2+273)-T_evap;
+    T_amb_evap=(T_amb2)-T_evap;
     COP=(a*T_evap)./T_amb_evap;
-    C_mc=3.93;
+    %https://www.teagasc.ie/media/website/rural-economy/farm-management/ThinkingTanks.pdf 
+    %Cap could be up to 13kW
+    C_mc=7;
     Q_mc=(C_mc*dT.*HourlyMilk)./(COP*3600);
     Q_totalyearmc=sum(Q_mc);
     %Capacity of the MilkCoolers
     %http://www.fao.org/3/a-i5791e.pdf - chosen the least efficient one
-    C_mc=2;
     MilkTime1=Q_mc./C_mc;
