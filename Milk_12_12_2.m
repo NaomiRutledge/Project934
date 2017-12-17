@@ -47,4 +47,3 @@
     %since this time is an estimated input. 
     MilkTime1=Q_mc./C_mc;
     
-    plot(ts1,MilkTime1);

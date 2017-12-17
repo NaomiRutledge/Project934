@@ -1,0 +1,16 @@
+%Dates
+    t1=datetime(2010,1,1,0,0,0);
+    t2=datetime(2010,12,31,23,0,0);
+    jan=datetime(2010,1,1,0,0,0);
+    feb=datetime(2010,2,1,0,0,0);
+    mar=datetime(2010,3,1,0,0,0);
+    apr=datetime(2010,4,1,0,0,0);
+    may=datetime(2010,5,1,0,0,0);
+    jun=datetime(2010,6,1,0,0,0);
+    jul=datetime(2010,7,1,0,0,0);
+    aug=datetime(2010,8,1,0,0,0);
+    sep=datetime(2010,9,1,0,0,0);
+    oct=datetime(2010,10,1,0,0,0);
+    nov=datetime(2010,11,1,0,0,0);
+    dec=datetime(2010,12,1,0,0,0);
+    ts1=(t1:hours(h):t2);
