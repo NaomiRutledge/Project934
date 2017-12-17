@@ -27,7 +27,6 @@
     T_ambmax=[7.6 7.5 8.2 10.5 12.8 14.9 16 16 15 12.5 10 8]+273;
     T_amb=(T_ambmax+T_ambmin)/2;
     T_amb2=repelem(T_amb,[(length(jan:1:feb)-1)*24/h (length(feb:1:mar)-1)*24/h (length(mar:1:apr)-1)*24/h (length(apr:1:may)-1)*24/h (length(may:1:jun)-1)*24/h (length(jun:1:jul)-1)*24/h (length(jul:1:aug)-1)*24/h (length(aug:1:sep)-1)*24/h (length(sep:1:oct)-1)*24/h (length(oct:1:nov)-1)*24/h (length(nov:1:dec)-1)*24/h length(dec:1:t2)*24/h]);
-    %plot(ts1,T_amb2)
 run Milk_12_12_2
 Q_totalyearmc;
 
@@ -39,5 +38,7 @@ Q_totalyearmm;
 
 %run Lighting_13_12_1
 
-Q_all=[Q_totalyearmc Q_totalyear_wh Q_totalyearmm];
-Q_total=sum(Q_all);
+Q_all_matrix=[Q_totalyearmc Q_totalyear_wh Q_totalyearmm];
+Q_total=sum(Q_all_matrix);
+Q_all=Q_mc+Q_wh+Q_mm;
+%plot(ts1,Q_all)
