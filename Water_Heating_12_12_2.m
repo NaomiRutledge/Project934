@@ -52,4 +52,4 @@ for T_cold2=T_hot-20;
     Q_totalyearwh2=sum(Q_wh2);
 end 
 Q_wh=Q_wh1+Q_wh2;
-Q_totalyearwh=Q_totalyearwh1+Q_totalyearwh2
+Q_totalyearwh=Q_totalyearwh1+Q_totalyearwh2;
